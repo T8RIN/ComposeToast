@@ -1,5 +1,8 @@
 # ComposeToast
+
 Animated Jetpack Compose replacement of android standard Toast messages
+
+Copy ToastHost.kt file to your repository and you are ready to engage!
 
 ```kotlin
 //Usage example
