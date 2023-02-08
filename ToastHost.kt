@@ -1,4 +1,3 @@
-import android.view.animation.OvershootInterpolator
 import androidx.annotation.FloatRange
 import androidx.compose.animation.*
 import androidx.compose.animation.core.tween
@@ -211,11 +210,15 @@ enum class ToastDuration { Short, Long }
 object ToastDefaults {
     @OptIn(ExperimentalAnimationApi::class)
     val transition: ContentTransform
-        get() = fadeIn(tween(250)) + slideInVertically(
-            tween(
-                500,
-                easing = { OvershootInterpolator(0.85f).getInterpolation(it) })
-        ) { it / 2 } with fadeOut(tween(250)) + slideOutVertically(tween(500)) { it / 2 }
+        get() = fadeIn(tween(300)) + scaleIn(
+            tween(500),
+            transformOrigin = TransformOrigin(0.5f, 1f)
+        ) + slideInVertically(
+            tween(500)
+        ) { it / 2 } with fadeOut(tween(250)) + slideOutVertically(tween(500)) { it / 2 } + scaleOut(
+            tween(750),
+            transformOrigin = TransformOrigin(0.5f, 1f)
+        )
     val contentColor: Color @Composable get() = MaterialTheme.colorScheme.inverseOnSurface.harmonizeWithPrimary()
     val color: Color @Composable get() = MaterialTheme.colorScheme.inverseSurface.harmonizeWithPrimary()
     val shape: Shape @Composable get() = MaterialTheme.shapes.extraLarge
