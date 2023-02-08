@@ -31,7 +31,7 @@ implementation("androidx.compose.material3:material3:1.1.0-alpha03")
 ```
 
 ## Find this repository useful? :heart:
-Support it by joining __[stargazers](https://github.com/t8rin/marquee/stargazers)__ for this repository. :star: <br>
+Support it by joining __[stargazers](https://github.com/t8rin/ComposeToast/stargazers)__ for this repository. :star: <br>
 And __[follow](https://github.com/t8rin)__ me for my next creations! 🤩
 
 # License
