@@ -214,7 +214,7 @@ object ToastDefaults {
         get() = fadeIn(tween(250)) + slideInVertically(
             tween(
                 500,
-                easing = { OvershootInterpolator(0.5f).getInterpolation(it) })
+                easing = { OvershootInterpolator(0.85f).getInterpolation(it) })
         ) { it / 2 } with fadeOut(tween(250)) + slideOutVertically(tween(500)) { it / 2 }
     val contentColor: Color @Composable get() = MaterialTheme.colorScheme.inverseOnSurface.harmonizeWithPrimary()
     val color: Color @Composable get() = MaterialTheme.colorScheme.inverseSurface.harmonizeWithPrimary()
